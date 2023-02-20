@@ -15,6 +15,7 @@ spec:
       containers:
       - name: deployment-container
         image: michelletian1104/frontend:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 30506
       restartPolicy: Always
