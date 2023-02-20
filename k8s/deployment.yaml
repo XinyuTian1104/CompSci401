@@ -13,7 +13,7 @@ spec:
         app: xt37-playlist-recommender
     spec:
       containers:
-      - name: michelletian1104/frontend
+      - name: frontend
         image: michelletian1104/frontend:latest
         ports:
         - containerPort: 30506
