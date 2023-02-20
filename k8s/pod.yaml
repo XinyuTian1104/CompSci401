@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: xt37-recommender-pod
+spec:
+  template:
+    spec:
+      containers:
+      - name: pod-container
+        image: michelletian1104/ml:latest
+      restartPolicy: OnFailure
