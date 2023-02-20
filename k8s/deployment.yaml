@@ -13,9 +13,16 @@ spec:
         app: xt37-playlist-recommender
     spec:
       containers:
-      - name: deployment-container
-        image: michelletian1104/frontend:latest
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 30506
+        - name: deployment-container
+          image: michelletian1104/frontend:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 30506
+          volumeMounts:
+            - name: xt37-recommender-deployment
+              mountPath: /data
       restartPolicy: Always
+      volumes:
+        - name: xt37-recommender-deployment
+          persistentVolumeClaim:
+            claimName: xt37-recommender-pvc

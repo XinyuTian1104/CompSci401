@@ -3,9 +3,15 @@ kind: Pod
 metadata:
   name: xt37-recommender-pod
 spec:
-  template:
-    spec:
-      containers:
-      - name: pod-container
-        image: michelletian1104/ml:latest
-      restartPolicy: OnFailure
+  containers:
+  - name: pod-container
+    image: michelletian1104/ml:latest
+    imagePullPolicy: Always
+    volumeMounts:
+      - name: xt37-recommender-pvc
+        mountPath: /data
+  restartPolicy: OnFailure
+  volumes:
+    - name: xt37-recommender-pvc
+      persistentVolumeClaim:
+        claimName: project2-pv-xt37
