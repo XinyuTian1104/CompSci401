@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: xt37-recommender-deployment
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: xt37-playlist-recommender
