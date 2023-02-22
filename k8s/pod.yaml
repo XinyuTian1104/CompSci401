@@ -4,12 +4,16 @@ metadata:
   name: xt37-recommender-pod
 spec:
   containers:
-  - name: pod-container
-    image: michelletian1104/ml:latest
-    imagePullPolicy: Always
-    volumeMounts:
-      - name: xt37-recommender-pvc
-        mountPath: /data
+    - name: pod-container
+      image: michelletian1104/ml:latest
+      imagePullPolicy: Always
+      volumeMounts:
+        - name: xt37-recommender-pvc
+          mountPath: /data
+      resources:
+        limits:
+          cpu: "200m"
+          memory: "1Gi"
   restartPolicy: OnFailure
   volumes:
     - name: xt37-recommender-pvc

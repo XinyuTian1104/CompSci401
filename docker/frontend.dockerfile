@@ -9,8 +9,8 @@ RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN pip3 install -r requirements.txt
 
 COPY app_server.py app_server.py
-# COPY model.pkl model.pkl
-# COPY recom_model.py recom_model.py
+COPY model.pkl model.pkl
+COPY recom_model.py recom_model.py
 
 ENV FLASK_APP=app_server.py
 EXPOSE 30506

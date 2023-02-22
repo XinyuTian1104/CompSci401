@@ -5,7 +5,7 @@ from recom_model import Model
 import datetime
 
 model = Model()
-raw_ds = pd.read_csv('https://github.com/XinyuTian1104/CompSci401/data/ds1.csv')
+raw_ds = pd.read_csv(os.environ['DATA'])
 model.train(raw_ds)
 
 e = datetime.datetime.now()
@@ -14,7 +14,7 @@ e = datetime.datetime.now()
 
 model = dict(
         model = model,
-        version = '1',
+        version = os.environ['VERSION'],
         model_date = e.strftime("%Y-%m-%d %H:%M:%S")
     )
 

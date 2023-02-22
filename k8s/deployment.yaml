@@ -16,6 +16,10 @@ spec:
         - name: deployment-container
           image: michelletian1104/frontend:latest
           imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: "200m"
+              memory: "1Gi"
           ports:
             - containerPort: 30506
           volumeMounts:
