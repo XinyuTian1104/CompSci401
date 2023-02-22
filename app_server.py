@@ -3,7 +3,14 @@ import pickle
 import pandas as pd
 
 app = Flask(__name__)
-app.model = pickle.load(open("model.pkl", "rb"))
+
+while True:
+    try:
+        app.model = pickle.load(open("/data/model.pkl", "rb"))
+        print('model loaded')
+        break
+    except:
+        print('model not loaded')
 
 @app.route("/api/recommend", methods=["POST"])
 def recommend():

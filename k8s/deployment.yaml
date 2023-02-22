@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: xt37-recommender-deployment
@@ -29,4 +29,4 @@ spec:
       volumes:
         - name: xt37-recommender-deployment
           persistentVolumeClaim:
-            claimName: xt37-recommender-pvc
+            claimName: project2-pvc-xt37
