@@ -26,8 +26,6 @@ def recommend():
     
     tracklist = mdl.recommend(songs)
 
-    print(tracklist)
-
     res = dict(
         tracklist = tracklist,
         version = version,
