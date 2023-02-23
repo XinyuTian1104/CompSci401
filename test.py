@@ -25,7 +25,7 @@ def test_api():
         except:
             response_json = "SERVICE_OFFLINE"
 
-        print("[", i+1, " / 100 ]",
+        print("[", i+1, " / 200 ]",
               time.strftime("%Y-%m-%d %H:%M:%S"), response_json)
 
         with open('test1.log', 'a') as f:
