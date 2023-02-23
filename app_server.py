@@ -9,7 +9,7 @@ def load_model():
     while True:
         try:
             app.model = pickle.load(open("/data/model.pkl", "rb"))
-            print('model updated and loaded')
+            print('model loaded')
             break
         except:
             print('model not loaded')
