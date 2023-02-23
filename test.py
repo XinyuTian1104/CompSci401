@@ -2,7 +2,7 @@ import os
 import time
 import requests
 
-with open('test.log', 'w') as f:
+with open('test1.log', 'w') as f:
     f.write('')
 
 
@@ -18,9 +18,9 @@ def test_api():
         ]
     }
 
-    for i in range(0, 100):
+    for i in range(0, 200):
         try:
-            response = requests.post(url, json=payload, timeout=0.5)
+            response = requests.post(url, json=payload, timeout=0.2)
             response_json = response.json()
         except:
             response_json = "SERVICE_OFFLINE"
@@ -31,7 +31,7 @@ def test_api():
         with open('test1.log', 'a') as f:
             f.write("[" + str(i+1) + " / 100 ] " +
                     time.strftime("%Y-%m-%d %H:%M:%S") + " " + str(response_json) + '\n')
-        time.sleep(0.5)
+        time.sleep(0.2)
 
 
 if __name__ == "__main__":
