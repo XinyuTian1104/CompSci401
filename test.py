@@ -29,7 +29,7 @@ def test_api():
               time.strftime("%Y-%m-%d %H:%M:%S"), response_json)
 
         with open('test1.log', 'a') as f:
-            f.write("[" + str(i+1) + " / 100 ] " +
+            f.write("[" + str(i+1) + " / 200 ] " +
                     time.strftime("%Y-%m-%d %H:%M:%S") + " " + str(response_json) + '\n')
         time.sleep(0.1)
 
