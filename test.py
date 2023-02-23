@@ -20,7 +20,7 @@ def test_api():
 
     for i in range(0, 200):
         try:
-            response = requests.post(url, json=payload, timeout=0.1)
+            response = requests.post(url, json=payload)
             response_json = response.json()
         except:
             response_json = "SERVICE_OFFLINE"
