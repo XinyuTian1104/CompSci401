@@ -7,5 +7,5 @@ spec:
     app: xt37-playlist-recommender
   ports:
     - protocol: TCP
-      port: 5000
+      port: 30506
       targetPort: 30506
