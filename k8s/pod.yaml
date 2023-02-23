@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
     - name: pod-container
-      image: michelletian1104/ml:v2
+      image: michelletian1104/ml:laetst
       imagePullPolicy: Always
       volumeMounts:
         - name: xt37-recommender-pvc

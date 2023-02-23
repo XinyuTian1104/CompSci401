@@ -2,7 +2,7 @@ DOCKER_REGISTRY=docker.io
 DOCKER_USERNAME=michelletian1104
 IMAGE1_NAME=frontend
 IMAGE2_NAME=ml
-TAG=v2
+TAG=latest
 
 .PHONY: build-image1
 build-image1:

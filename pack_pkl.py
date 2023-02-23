@@ -1,7 +1,7 @@
 import pickle
 import pandas as pd
 import os
-from recom_model import Model
+from project2.CompSci401.recom_model import Model
 import datetime
 
 def main():
