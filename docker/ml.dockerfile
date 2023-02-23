@@ -13,6 +13,6 @@ COPY recom_model.py recom_model.py
 COPY pack_pkl.py pack_pkl.py
 
 ENV DATA=https://raw.githubusercontent.com/XinyuTian1104/CompSci401/main/data/ds2.csv
-ENV VERSION=1
+ENV VERSION=2
 
 CMD ["python3", "pack_pkl.py"]
