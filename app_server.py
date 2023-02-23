@@ -28,7 +28,7 @@ def recommend():
 
     res = dict(
         tracklist = tracklist,
-        version = version+1,
+        version = version,
         model_date = model_date
     )
 
