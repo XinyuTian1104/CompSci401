@@ -7,7 +7,7 @@ app = Flask(__name__)
 while True:
     try:
         app.model = pickle.load(open("/data/model.pkl", "rb"))
-        print('model updated and loaded')
+        print('model loaded')
         break
     except:
         print('model not loaded')
