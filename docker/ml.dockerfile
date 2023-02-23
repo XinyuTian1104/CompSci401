@@ -12,7 +12,7 @@ RUN pip3 install -r requirements.txt
 COPY recom_model.py recom_model.py
 COPY pack_pkl.py pack_pkl.py
 
-ENV DATA=https://raw.githubusercontent.com/XinyuTian1104/CompSci401/main/data/ds2.csv
-ENV VERSION=2
+ENV DATA=https://raw.githubusercontent.com/XinyuTian1104/CompSci401/main/data/ds1.csv
+ENV VERSION=1
 
 CMD ["python3", "pack_pkl.py"]
