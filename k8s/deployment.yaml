@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: xt37-recommender-deployment-v1
+  name: xt37-recommender-deployment-v2
 spec:
   replicas: 3
   selector:
